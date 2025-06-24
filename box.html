@@ -5,42 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Box task</title>
+  <body>
+
+<!-- Code for diagonal box -->
   <style>
     * {
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+     
     }
 
-    .bx,
-    .sx,
-    .jx {
-      height: 200px;
-      width: 200px;
-      padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .bx,.sx,.jx {
+        height: 200px;
+        width: 200px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
     }
-
+      
     .bx {
-      background-color: rgb(208, 3, 3);
+      background-color: rgb(208, 3, 3);     
+      z-index: 3;
     }
 
     .sx {
       background-color: rgb(26, 74, 138);
-      margin-left: 200px;
-
+      left:150px;
+      top: 100px;  
+      z-index: 2;      
     }
 
     .jx {
       background-color: rgb(14, 200, 24);
-      margin-left: 400px;
+      left:250px ;
+      top: 250px;      
+      z-index: 1;
     }
   </style>
-</head>
 
-<body>
   <div class="bx">
     <h3>meow</h3>
   </div>
@@ -51,7 +56,53 @@
 
   <div class="jx">
     <h3>meow</h3>
-  </div>
+  </div> 
+
+  <!--For position relative -->
+
+<style>
+      .bx1 {
+        height: 500px;
+        width: 400px;
+        border: 1px solid black;
+        position: relative;
+        left: 500px;
+      }
+
+      .bx2 {
+        height: 100px;
+        width: 100px;
+        background-color: blueviolet;
+        position: absolute;
+        border-radius: 50%;
+        bottom: 0;
+        right: 0;
+        box-shadow: rgba(223, 189, 210, 0.4) 5px 5px, rgba(208, 137, 182, 0.3) 10px 10px, rgba(237, 152, 206, 0.2) 15px 15px, rgba(247, 136, 206, 0.1) 20px 20px, rgba(243, 116, 196, 0.05) 25px 25px;
+    
+      }
+      
+      img{
+            filter:saturate(2.5) brightness(1.2) blur(1.5px);
+            top: 0;
+            left: 0;
+        }
+
+      /* absolute fixed relative sticky z-index */
+    </style>
+  </head>
+
+    <div class="bx1">
+      <div class="bx2">
+         
+
+    </div>
+    <div>
+    <img src="https://images.unsplash.com/photo-1749581434794-d5de133303d9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3Mnx8fGVufDB8fHx8fA%3D%3D" alt="">    
+
+
+      </div>
+     </div>
+     
 </body>
 
 </html>
